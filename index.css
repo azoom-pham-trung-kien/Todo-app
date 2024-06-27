@@ -1,0 +1,168 @@
+:root {
+  --text-01: #323232;
+  --text-02: #969696;
+  --text-03: #F3F3F3;
+  --text-04: #C2C2C2;
+  --text-05: #D98326;
+  --primary-background: #F1ECE6;
+  --background-01: #76B7CD;
+  --white: #ffffff;
+}
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  color: var(--text-01);
+  font-size: 16px;
+  font-family: "Poppins", sans-serif;
+  background-color: var(--white);
+  min-height: 100vh;
+}
+
+/* base css */
+.button {
+  background-color: unset;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  opacity: 1;
+}
+
+.button:hover {
+  opacity: 0.8;
+}
+
+/* content css */
+
+.content-wrapper {
+  width: 100%;
+  height: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+}
+/* header */
+.content-wrapper > .header {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  background-color: var(--primary-background);
+}
+/* content */
+.content-wrapper > .content-container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  align-items: center;
+}
+/* tab list */
+.content-wrapper > .content-container > .tab-list {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.content-wrapper > .content-container > .tab-list > .button {
+  width: 100%;
+  background-color: var(--text-03);
+  line-height: 48px;
+  font-size: 32px;
+  color: var(--text-02);
+  padding-top: 20px;
+}
+.content-wrapper > .content-container > .tab-list > .button.-active {
+  border-bottom: 5px solid var(--text-05);
+  color: var(--text-01);
+}
+/* form */
+.content-wrapper > .content-container > .form {
+  width: 100%;
+  max-width: 1040px;
+  display: flex;
+  border-radius: 50px;
+  background-color: var(--primary-background);
+  overflow: hidden;
+}
+.content-wrapper > .content-container > .form > .input {
+  width: 100%;
+  background-color: var(--primary-background);
+  outline: none;
+  border: none;
+  margin: 15px 34px;
+  font-size: 32px;
+  line-height: 48px;
+}
+
+.content-wrapper > .content-container > .form > .input::placeholder {
+  color: var(--text-02);
+}
+
+.content-wrapper > .content-container > .form > .button {
+  width: fit-content;
+  text-transform: uppercase;
+  color: var(--text-03);
+  line-height: 56px;
+  font-size: 38px;
+  background-color: var(--background-01);
+  padding: 0 28px;
+}
+
+/* todo list */
+
+.content-wrapper > .content-container > .todo-list {
+  width: 100%;
+  max-width: 1040px;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--primary-background);
+  border-radius: 50px;
+  padding: 0 45px;
+}
+.content-wrapper > .content-container > .todo-list > .list > .item {
+  min-height: 88px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  font-size: 32px;
+  line-height: 48px;
+  font-weight: 400;
+  border-bottom: 1px solid var(--background-01);
+}
+.content-wrapper > .content-container > .todo-list > .list > .item > .label {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+
+.content-wrapper > .content-container > .todo-list > .list > .item > .label > .icon.-check {
+  display: none;
+}
+.content-wrapper > .content-container > .todo-list > .list > .item > .checkbox:checked + .label {
+  color: var(--text-04);
+  text-decoration: line-through;
+}
+.content-wrapper > .content-container > .todo-list > .list > .item > .checkbox:checked + .label > .icon.-check {
+  display: block;
+}
+.content-wrapper > .content-container > .todo-list > .list > .item > .checkbox:checked + .label > .icon.-uncheck {
+  display: none;
+}
+
+
+.content-wrapper > .content-container > .todo-list > .list > .item > .button {
+  width: fit-content;
+  margin-left: auto;
+}
+.content-wrapper > .content-container > .todo-list > .button {
+  margin: 20px;
+  display: flex;
+  gap: 10px;
+  color: var(--text-05);
+  font-size: 24px;
+  line-height: 36px;
+  margin-left: auto;
+}

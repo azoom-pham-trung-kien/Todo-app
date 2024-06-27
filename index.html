@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="index.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <title>Todo App</title>
+  </head>
+  <body>
+    <div class="content-wrapper">
+      <div class="header">
+        <img src="/assets//images/todo-logo.svg" />
+      </div>
+      <div class="content-container">
+        <div class="tab-list">
+          <button class="button -active">Personal</button>
+          <button class="button">Professional</button>
+        </div>
+        <div class="form">
+          <input
+            class="input"
+            type="text"
+            placeholder="What do you need to do?"
+          />
+          <button class="button -submit">Add</button>
+        </div>
+        <div class="todo-list">
+          <div class="list">
+            <div class="item">
+              <input id="job-1" hidden class="checkbox" type="checkbox" />
+              <label for="job-1" class="label">
+                <img class="icon -check" src="/assets/icons/check-circle.svg" />
+                <img
+                  class="icon -uncheck"
+                  src="/assets/icons/radio-button-unchecked.svg"
+                />
+                Personal Work No. 1
+              </label>
+              <button class="button">
+                <img
+                  class="icon -delete"
+                  src="/assets/icons/delete-outline.svg"
+                />
+              </button>
+            </div>
+            <div class="item">
+              <input id="job-2" hidden class="checkbox" type="checkbox" />
+              <label for="job-2" class="label">
+                <img class="icon -check" src="/assets/icons/check-circle.svg" />
+                <img
+                  class="icon -uncheck"
+                  src="/assets/icons/radio-button-unchecked.svg"
+                />
+                Personal Work No. 2
+              </label>
+              <button class="button">
+                <img
+                  class="icon -delete"
+                  src="/assets/icons/delete-outline.svg"
+                />
+              </button>
+            </div>
+            <div class="item">
+              <input
+                id="job-3"
+                hidden
+                class="checkbox"
+                checked
+                type="checkbox"
+              />
+              <label for="job-3" class="label">
+                <img class="icon -check" src="/assets/icons/check-circle.svg" />
+                <img
+                  class="icon -uncheck"
+                  src="/assets/icons/radio-button-unchecked.svg"
+                />
+                Personal Work No. 2
+              </label>
+              <button class="button">
+                <img
+                  class="icon -delete"
+                  src="/assets/icons/delete-outline.svg"
+                />
+              </button>
+            </div>
+          </div>
+          <button class="button -clear-complete">
+            <img src="/assets/icons/clear.svg" />
+            <span class="text"> Clear Completed</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
